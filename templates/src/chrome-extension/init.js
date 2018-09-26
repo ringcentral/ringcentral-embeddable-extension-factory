@@ -1,9 +1,13 @@
 
-import onCallEnd from './on-call-end'
-import initContactsFeature from './handle-contact-feature'
+
+import initThirdPartyApi from './third-party-api'
+import insertClickToCall from './insert-click-to-call-button'
+import addHoverEvent from './hover-to-show-call-button'
 import {
   popup
 } from './helpers'
+import './style.styl'
+import './custom.styl'
 
 function registerService() {
   // Listen message from background.js to open app window when user click icon.
@@ -16,25 +20,14 @@ function registerService() {
     }
   )
 
-  // handle call log sync:
-  window.addEventListener('message', (e) => {
-    const data = e.data
-    if (data) {
-      switch (data.type) {
-        case 'rc-call-end-notify':
-          onCallEnd(data)
-          break
-        default:
-          break
-      }
-    }
-  })
-
   // handle contacts sync feature
-  initContactsFeature()
+  initThirdPartyApi()
 
   // insert click-to-call button
-  //handle
+  insertClickToCall()
+
+  // add event handler to developer configed element, show click-to-dial tooltip to the elements
+  addHoverEvent()
 }
 
 let registered = false

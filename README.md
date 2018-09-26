@@ -1,11 +1,20 @@
 # ringcentral-embeddable-extension-factory
-Cli tool to create a RingCentral Embeddable Voice chrome extension for sites.
+Cli tool to create a RingCentral Embeddable Voice chrome extension start kit for sites.
+
+## features
+- Build src with webpack 4/babel etc
+- eslint check before push
+- Fully extendable/custmizable
+- Simplify basic click-to-call feature with config
 
 ## use
 1. init
 ```bash
 # make sure you have npm@5.2+ installed
-npx rcef my-app # carefully answer all promots
+npx ringcentral-embeddable-extension-factory my-app
+# or install it first
+# npm i -g ringcentral-embeddable-extension-factory && reef my-app
+# then carefully answer all questions, then the my-app folder will be create
 cd my-app
 npm i
 npm start

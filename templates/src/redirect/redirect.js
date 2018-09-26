@@ -1,5 +1,5 @@
 /**
- * auth hubspot app and redirect to app page
+ * example auth 2.0 redirect script
  */
 import './style.styl'
 
@@ -14,7 +14,6 @@ function parseQuery(queryString) {
 }
 
 function init() {
-  console.log(location.search)
   let q = parseQuery(location.search)
   let {
     code,

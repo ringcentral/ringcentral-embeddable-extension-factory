@@ -1,7 +1,7 @@
 {
-  "name": "RingCentral Embeddable Voice for HubSpot",
-  "description": "RingCentral Embeddable Voice for HubSpot",
-  "version": "0.0.2",
+  "name": "{{name}}",
+  "description": "{{description}}",
+  "version": "{{version}}",
   "permissions": [
     "http://*/",
     "https://*/",
@@ -10,9 +10,7 @@
     "tabs",
     "background",
     "tabCapture",
-    "unlimitedStorage",
-    "https://*.hubspot.com/*",
-    "https://*.hubspot.com/*"
+    "{{siteMatch}}"
   ],
   "page_action": {
     "default_icon": {
@@ -31,11 +29,10 @@
   "content_scripts": [
     {
       "matches": [
-        "https://app.hubspot.com/*"
+        "{{siteMatch}}"
       ],
       "exclude_matches": [
-        "https://app.hubspot.com/login*",
-        "https://app.hubspot.com/myaccounts-beta*"
+        {{contentExcludesMatch}}
       ],
       "js": [
         "./content.js"

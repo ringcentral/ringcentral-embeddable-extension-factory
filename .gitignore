@@ -10,7 +10,8 @@
 /dist/content.js*
 package-lock.json
 /config.js
-
+/work/
+/g/
 *.pid
 *.seed
 *.gz
