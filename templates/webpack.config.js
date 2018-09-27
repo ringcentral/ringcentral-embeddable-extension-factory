@@ -39,9 +39,7 @@ const pug = {
 var config = {
   mode: 'production',
   entry: {
-    content: './src/chrome-extension/content.js',
-    redirect: './src/redirect/redirect.pug',
-    '../app/redirect': './src/redirect/redirect.js'
+    content: './src/chrome-extension/content.js'
   },
   output: {
     path: __dirname + '/dist',
