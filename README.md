@@ -1,6 +1,8 @@
 # ringcentral-embeddable-extension-factory
 Cli tool to create a RingCentral Embeddable Voice chrome extension start kit for sites.
 
+![cli](screenshots/cli.png)
+
 ## features
 - Build src with webpack 4/babel etc
 - eslint check before push
@@ -26,12 +28,23 @@ npm start
 
 ## dev
 - Edit `src/*`, after the auto build complete, go to Chrome extensions page, click refresh button in your extension card, then refresh your site to see the change.
-- Add click to call button: todo
-- Add hover to show click-to-call-button: todo
-- Add contacts related feature: todo
-- Add call log sync: todo
-- Use custom icons: just replace `my-app/dist/icons/*.png` with your icon pngs
-- todo
+- [Add click to call button](docs/add-click-to-dial-button.md)
+- [Add hover to show click-to-call-button](docs/add-hover-to-show-click-to-call-button.md)
+- [Add contacts related feature](docs/add-contacts-features.md)
+- [Add call log sync](docs/add-call-log-sync.md)
+- Use custom icons: just replace `my-app/dist/icons/*.png` with your icon pngs, must be same size.
+- Enable pre-push eslint check: just uncomment `// cp(prePushPathFrom, prePushPath)` in `bin/post-install.js` and run `npm i`, then if there is eslint error in `src/*`, push will be stopped.
+- Build with your own ClinetID and AppServer:
+```bash
+cp config.sample.js config.js
+```
+- Create an app from https://developer.ringcentral.com/, make sure you choose a browser based app, and set all permissions, and add `https://ringcentral.github.io/ringcentral-embeddable/redirect.html` to your redirect URI list, Edit `config.js`,
+- Fill your RingCentral app's clientID and appServer in `config.js`
+
+## License
+MIT
+
+
 
 
 

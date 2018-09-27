@@ -8,5 +8,5 @@ const prePushPath = resolve(__dirname, '../.git/hooks/pre-push')
 const prePushPathFrom = resolve(__dirname, 'pre-push')
 
 if (!existsSync(prePushPath)) {
-  cp(prePushPathFrom, prePushPath)
+  // cp(prePushPathFrom, prePushPath)
 }
