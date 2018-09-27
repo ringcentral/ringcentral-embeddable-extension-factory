@@ -24,6 +24,20 @@ let inited = false
 let rcLogined = false
 
 /**
+ * Notify ringcentral widgets auth state
+ * @param {Bool} authorized
+ */
+function notifyRCAuthed(authorized = true) {
+  document
+    .querySelector('#rc-widget-adapter-frame')
+    .contentWindow
+    .postMessage({
+      type: 'rc-adapter-update-authorization-status',
+      authorized
+    }, '*')
+}
+
+/**
  * handle ringcentral widgets contacts list events
  * @param {Event} e
  */
@@ -99,9 +113,10 @@ async function handleRCEvents(e) {
     }, '*')
   }
   else if (path === '/contacts/match') {
-    /*
+
     const matchedContacts = {
       '+12165325078': [
+        /*
         {
           entityType: 'TestService',
           name: 'TestService 1',
@@ -110,14 +125,14 @@ async function handleRCEvents(e) {
             phoneType: 'directPhone',
           }]
         }
+        */
       ]
     }
-    */
     document.querySelector("#rc-widget-adapter-frame").contentWindow.postMessage({
       type: 'rc-post-message-response',
       responseId: data.requestId,
       response: {
-        data: undefined
+        data: matchedContacts
       },
     }, '*')
   } else if (data.path === '/callLogger') {
@@ -128,6 +143,36 @@ async function handleRCEvents(e) {
       responseId: data.requestId,
       response: { data: 'ok' },
     }, '*');
+  }
+  else if (data.path === '/activities') {
+    const contact = data
+    console.log(contact)
+    const activities = [
+      /*
+      {
+        id: '123',
+        subject: 'Title',
+        time: 1528854702472
+      }
+      */
+    ]
+    // response to widget
+    document.querySelector("#rc-widget-adapter-frame").contentWindow.postMessage({
+      type: 'rc-post-message-response',
+      responseId: data.requestId,
+      response: { data: activities },
+    }, '*')
+  }
+  else if (data.path === '/activity') {
+    const activity = data
+    // handle activity here
+    console.log(activity)
+    // response to widget
+    document.querySelector("#rc-widget-adapter-frame").contentWindow.postMessage({
+      type: 'rc-post-message-response',
+      responseId: data.requestId,
+      response: { data: 'ok' },
+    }, '*')
   }
 }
 
@@ -160,7 +205,6 @@ export default async function initThirdPartyApi () {
   */
 
   //register service to rc-widgets example
-  /*
   rcFrame
     .contentWindow.postMessage({
       type: 'rc-adapter-register-third-party-service',
@@ -172,8 +216,12 @@ export default async function initThirdPartyApi () {
         authorizationPath: '/authorize',
         authorizedTitle: 'Unauthorize',
         unauthorizedTitle: 'Authorize',
+        activitiesPath: '/activities',
+        activityPath: '/activity',
+        callLoggerPath: '/callLogger',
+        callLoggerTitle: 'Log to TestService',
         authorized: false
       }
     }, '*')
-    */
+
 }
