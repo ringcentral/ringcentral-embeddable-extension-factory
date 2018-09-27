@@ -55,3 +55,6 @@ else if (path === '/contacts') {
     }, '*')
   }
 ```
+
+## Realworld example
+https://github.com/zxdong262/hubspot-embeddable-ringcentral-phone/blob/master/src/chrome-extension/third-party-api.js

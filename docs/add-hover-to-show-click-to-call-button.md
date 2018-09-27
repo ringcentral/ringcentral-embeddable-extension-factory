@@ -24,3 +24,6 @@ export const hoverShowClickToCallButton = [
   */
 ]
 ```
+
+## Realworld example
+https://github.com/zxdong262/hubspot-embeddable-ringcentral-phone/blob/master/src/chrome-extension/content-insert-config.js

@@ -3,6 +3,12 @@ Cli tool to create a RingCentral Embeddable Voice chrome extension start kit for
 
 ![cli](screenshots/cli.png)
 
+Created with [Embbnux Ji](https://github.com/embbnux)'s tuturial:
+ [Building Chrome Extension Integrations with RingCentral Embeddable](https://medium.com/ringcentral-developers/build-a-chrome-extension-with-ringcentral-embeddable-bb6faee808a3)
+
+## Realworld examples
+- [hubspot-embeddable-ringcentral-phone](https://github.com/zxdong262/hubspot-embeddable-ringcentral-phone)
+
 ## Features
 - Build src with webpack 4/babel etc
 - eslint check before push
