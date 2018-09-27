@@ -35,11 +35,10 @@ npm start
 - Use custom icons: just replace `my-app/dist/icons/*.png` with your icon pngs, must be same size.
 - Enable pre-push eslint check: just uncomment `// cp(prePushPathFrom, prePushPath)` in `bin/post-install.js` and run `npm i`, then if there is eslint error in `src/*`, push will be stopped.
 - Build with your own ClinetID and AppServer:
-```bash
-cp config.sample.js config.js
-```
-- Create an app from https://developer.ringcentral.com/, make sure you choose a browser based app, and set all permissions, and add `https://ringcentral.github.io/ringcentral-embeddable/redirect.html` to your redirect URI list, Edit `config.js`,
-- Fill your RingCentral app's clientID and appServer in `config.js`
+  * run `cp config.sample.js config.js`
+  * Create an app from https://developer.ringcentral.com/, make sure you choose a browser based app, and set all permissions, and add `https://ringcentral.github.io/ringcentral-embeddable/redirect.html` to your redirect URI list, Edit `config.js`,
+
+  * Fill your RingCentral app's clientID and appServer in `config.js`
 
 ## License
 MIT
