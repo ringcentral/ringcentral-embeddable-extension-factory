@@ -3,13 +3,13 @@ Cli tool to create a RingCentral Embeddable Voice chrome extension start kit for
 
 ![cli](screenshots/cli.png)
 
-## features
+## Features
 - Build src with webpack 4/babel etc
 - eslint check before push
 - Fully extendable/custmizable
 - Simplify basic click-to-call feature with config
 
-## use
+## Use
 1. init
 ```bash
 # make sure you have npm@5.2+ installed
@@ -26,7 +26,7 @@ npm start
 4. Load `my-app/dist` as unpacked package.
 5. Goto your site to see
 
-## dev
+## Dev
 - Edit `src/*`, after the auto build complete, go to Chrome extensions page, click refresh button in your extension card, then refresh your site to see the change.
 - [Add click to call button](docs/add-click-to-dial-button.md)
 - [Add hover to show click-to-call-button](docs/add-hover-to-show-click-to-call-button.md)
