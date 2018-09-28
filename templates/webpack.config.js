@@ -7,7 +7,6 @@ const HappyPack = require('happypack')
 const happyThreadPool = packThreadCount === 0 ? null : HappyPack.ThreadPool({ size: packThreadCount })
 const path = require('path')
 const LodashModuleReplacementPlugin = require('lodash-webpack-plugin')
-const express = require('express')
 
 const happyConf = {
   loaders: ['babel-loader'],
@@ -109,15 +108,7 @@ var config = {
       'process.env.ringCentralConfigs': JSON.stringify(sysConfigDefault.ringCentralConfigs),
       'process.env.thirdPartyConfigs': JSON.stringify(sysConfigDefault.thirdPartyConfigs)
     })
-  ],
-  devServer: {
-    port: sysConfigDefault.devPort,
-    contentBase: __dirname,
-    setup: function(app) {
-      app.use('/', express.static(__dirname))
-    }
-  }
-
+  ]
 }
 
 module.exports = config
