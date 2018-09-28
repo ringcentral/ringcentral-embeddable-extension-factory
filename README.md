@@ -8,7 +8,7 @@ Created with [Embbnux Ji](https://github.com/embbnux)'s tuturial:
 
 ## Realworld examples
 - [hubspot-embeddable-ringcentral-phone](https://github.com/zxdong262/hubspot-embeddable-ringcentral-phone)
-
+- [insightly-embeddable-ringcentral-phone](https://github.com/zxdong262/insightly-embeddable-ringcentral-phone)
 ## Features
 - Build src with webpack 4/babel etc
 - eslint check before push
