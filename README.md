@@ -35,6 +35,7 @@ npm start
 ## Dev
 - Edit `src/*`, after the auto build complete, go to Chrome extensions page, click refresh button in your extension card, then refresh your site to see the change.
 - [Add click to call button](docs/add-click-to-dial-button.md)
+- [Convert phone number text to click-to-dial link](docs/convert-phone-number-text-to-click-to-dial-link.md)
 - [Add hover to show click-to-call-button](docs/add-hover-to-show-click-to-call-button.md)
 - [Add contacts related feature](docs/add-contacts-features.md)
 - [Add call log sync](docs/add-call-log-sync.md)

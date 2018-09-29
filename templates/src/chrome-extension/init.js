@@ -3,6 +3,7 @@
 import initThirdPartyApi from './third-party-api'
 import insertClickToCall from './insert-click-to-call-button'
 import addHoverEvent from './hover-to-show-call-button'
+import convertPhoneLink from './make-phone-number-clickable'
 import {
   popup
 } from './helpers'
@@ -28,6 +29,9 @@ function registerService() {
 
   // add event handler to developer configed element, show click-to-dial tooltip to the elements
   addHoverEvent()
+
+  // convert phonenumber text to click-to-dial link
+  convertPhoneLink()
 }
 
 let registered = false
