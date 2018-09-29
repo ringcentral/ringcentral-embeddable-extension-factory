@@ -77,3 +77,14 @@ export const hoverShowClickToCallButton = [
   */
 ]
 
+// modify phone number text to click-to-call link
+export const phoneNumberSelectors = [
+  /*
+  {
+    urlCheck: (href) => {
+      return href.includes('?blade=/details/contact')
+    },
+    selector: '#modal-details-body .metadata-span-phone'
+  }
+  */
+]
