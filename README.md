@@ -1,4 +1,6 @@
 # ringcentral-embeddable-extension-factory
+[![Build Status](https://travis-ci.org/zxdong262/ringcentral-embeddable-extension-factory.svg?branch=master)](https://travis-ci.org/zxdong262/ringcentral-embeddable-extension-factory)
+
 Cli tool to create a RingCentral Embeddable Voice chrome extension start kit for sites.
 
 ![cli](screenshots/cli.png)
