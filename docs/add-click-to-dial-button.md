@@ -1,5 +1,7 @@
 # Add click to dial button
 
+![](screenshots/fac-3.png)
+
 There is pre-defined functions in `src/chrome-extension/insert-click-to-call-button.js` to help handle inserting click-to-dial button in page, just need to write proper configs in `src/chrome-extension/content-insert-config.js`,
 ```js
 export const insertClickToCallButton = [
