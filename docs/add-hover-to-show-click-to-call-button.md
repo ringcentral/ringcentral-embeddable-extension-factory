@@ -1,6 +1,6 @@
 # Add hover contact element to show click-to-call tooltip button
 
-# Add click to dial button
+![](../screenshots/fac-2.png)
 
 There is pre-defined functions in `src/chrome-extension/hover-to-show-call-button.js` to help adding hovering contact element to show click-to-call tooltip button event in page, just need to write proper configs in `src/chrome-extension/content-insert-config.js`,
 ```js
