@@ -1,6 +1,6 @@
 {
   "name": "ringcentral-embeddable-extension-factory",
-  "version": "0.0.8",
+  "version": "0.0.9s",
   "description": "Cli tool to create a RingCentral Embeddable Voice chrome extension for sites.",
   "main": "bin/reef.js",
   "bin": {
