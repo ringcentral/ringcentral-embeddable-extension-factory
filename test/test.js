@@ -4,12 +4,14 @@ const fs = require('fs')
 const {rm} = require('shelljs')
 const {resolve} = require('path')
 const prompts = require('prompts')
+const pkg = require('../package.json')
 const testConfig = {
   name: 'my app',
   npmName: 'my-app',
   description: 'ma-app',
   version: '0.0.1',
-  siteMatch: 'https://example.com/*',
+  siteMatch: 'https://*.insightly.com/',
+  spa: true,
   confirm: true
 }
 
@@ -37,22 +39,17 @@ let tests = [
       'description',
       'version'
     ]
-  },
-  {
-    path: 'src/chrome-extension/third-party-api.js',
-    strings: [
-      'name'
-    ]
   }
 ]
 
-describe('version fixer', function() {
+describe(pkg.name, function() {
   this.timeout(100000)
   it('default', function(done) {
     prompts.inject(testConfig)
     let p = resolve(__dirname, './my-app')
     reef({
-      path: p
+      path: p,
+      name: 'my-app'
     })
     setTimeout(async function() {
       for (let t of tests) {
@@ -69,10 +66,9 @@ describe('version fixer', function() {
           )
         }
       }
-      rm('-rf', p)
+      //rm('-rf', p)
       done()
-    }, 1000)
+    }, 3000)
   })
-
 
 })

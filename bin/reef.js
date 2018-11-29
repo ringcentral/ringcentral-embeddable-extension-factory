@@ -6,19 +6,18 @@ const program = require('commander')
 
 program
   .version(require('../package.json').version)
-  .description('Cli tool to create a RingCentral Embeddable Voice chrome extension start kit for sites')
+  .description('Cli tool to create a RingCentral Embeddable Voice chrome extension for CRM site')
   .usage('[appName]')
   .parse(process.argv)
 
-const arr = program.rawArgs
-
-let path = program.args.shift()
-if (!path) {
-  return program.outputHelp()
+let name = program.args.shift()
+if (!name) {
+  program.outputHelp()
+} else {
+  let path = resolve(name)
+  reef({
+    name,
+    path
+  })
 }
 
-path = resolve(path)
-
-reef({
-  path
-})
