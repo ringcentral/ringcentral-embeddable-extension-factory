@@ -16,7 +16,7 @@ package-lock.json
 *.seed
 *.gz
 .project
-my-app/
+my-app
 
 # Coverage directory used by tools like istanbul
 coverage
