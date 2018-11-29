@@ -21,9 +21,9 @@ cd my-app
 
 ## Realworld examples
 
-- [hubspot-embeddable-ringcentral-phone](https://github.com/zxdong262/hubspot-embeddable-ringcentral-phone)
-- [insightly-embeddable-ringcentral-phone](https://github.com/zxdong262/insightly-embeddable-ringcentral-phone)
-- [redtail-embeddable-ringcentral-phone](https://github.com/zxdong262/redtail-embeddable-ringcentral-phone)
+- [hubspot-embeddable-ringcentral-phone (spa)](https://github.com/zxdong262/hubspot-embeddable-ringcentral-phone)
+- [insightly-embeddable-ringcentral-phone (spa)](https://github.com/zxdong262/insightly-embeddable-ringcentral-phone)
+- [redtail-embeddable-ringcentral-phone (non spa)](https://github.com/zxdong262/redtail-embeddable-ringcentral-phone)
 
 ## License
 

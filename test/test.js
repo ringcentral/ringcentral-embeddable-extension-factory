@@ -15,6 +15,16 @@ const testConfig = {
   confirm: true
 }
 
+const testConfig1 = {
+  name: 'my app1',
+  npmName: 'my-app1',
+  description: 'ma-app1',
+  version: '0.0.1',
+  siteMatch: 'https://*.redtailtechnology.com/*',
+  spa: false,
+  confirm: true
+}
+
 let tests = [
   {
     path: 'README.md',
@@ -71,4 +81,30 @@ describe(pkg.name, function() {
     }, 3000)
   })
 
+  it('non spa', function(done) {
+    prompts.inject(testConfig1)
+    let p = resolve(__dirname, './my-app1')
+    reef({
+      path: p,
+      name: 'my-app1'
+    })
+    setTimeout(async function() {
+      for (let t of tests) {
+        let {path, strings} = t
+        let fileStr = fs
+          .readFileSync(
+            p + '/' + path
+          ).toString()
+        for (let s of strings) {
+          let v = testConfig1[s]
+          assert(
+            fileStr.includes(v),
+            true
+          )
+        }
+      }
+      rm('-rf', p)
+      done()
+    }, 3000)
+  })
 })
