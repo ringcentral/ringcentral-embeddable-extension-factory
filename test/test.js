@@ -66,7 +66,7 @@ describe(pkg.name, function() {
           )
         }
       }
-      //rm('-rf', p)
+      rm('-rf', p)
       done()
     }, 3000)
   })
