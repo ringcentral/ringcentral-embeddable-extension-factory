@@ -44,7 +44,7 @@ let tests = [
 
 describe(pkg.name, function() {
   this.timeout(100000)
-  it('default', function(done) {
+  it('spa', function(done) {
     prompts.inject(testConfig)
     let p = resolve(__dirname, './my-app')
     reef({
