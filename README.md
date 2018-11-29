@@ -28,8 +28,3 @@ cd my-app
 ## License
 
 MIT
-
-
-
-
-
