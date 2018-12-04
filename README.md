@@ -19,6 +19,14 @@ cd my-app
 # Then just follow my-app/README.md's instruction
 ```
 
+## Tutorial
+
+Visit our [detailed tutorial](https://ringcentral-tutorials.github.io/build-chrome-ringcentral-widgets-extension-for-crm).
+
+## Video
+
+[https://youtu.be/2njQSk8x2K4](https://youtu.be/2njQSk8x2K4)
+
 ## Realworld examples
 
 - [hubspot-embeddable-ringcentral-phone (spa)](https://github.com/zxdong262/hubspot-embeddable-ringcentral-phone)
