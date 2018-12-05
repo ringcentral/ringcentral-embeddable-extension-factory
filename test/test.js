@@ -10,7 +10,7 @@ const testConfig = {
   npmName: 'my-app',
   description: 'ma-app',
   version: '0.0.1',
-  siteMatch: 'https://*.insightly.com/',
+  siteMatch: 'https://*.insightly.com/*',
   spa: true,
   confirm: true
 }
@@ -105,6 +105,6 @@ describe(pkg.name, function() {
       }
       rm('-rf', p)
       done()
-    }, 3000)
+    }, 4000)
   })
 })
