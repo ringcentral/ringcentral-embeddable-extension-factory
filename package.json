@@ -1,6 +1,6 @@
 {
   "name": "ringcentral-embeddable-extension-factory",
-  "version": "0.0.11",
+  "version": "0.1.0",
   "description": "Cli tool to create a RingCentral Embeddable Voice chrome extension for sites.",
   "main": "bin/reef.js",
   "bin": {
@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zxdong262/ringcentral-embeddable-extension-factory.git"
+    "url": "git+https://github.com/ringcentral/ringcentral-embeddable-extension-factory.git"
   },
   "keywords": [
     "ringcentral",
@@ -28,10 +28,10 @@
   "author": "Drake Zhao <drake.zhao@ringcentral.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/zxdong262/ringcentral-embeddable-extension-factory/issues"
+    "url": "https://github.com/ringcentral/ringcentral-embeddable-extension-factory/issues"
   },
   "preferGlobal": true,
-  "homepage": "https://github.com/zxdong262/ringcentral-embeddable-extension-factory#readme",
+  "homepage": "https://github.com/ringcentral/ringcentral-embeddable-extension-factory#readme",
   "devDependencies": {
     "babel-eslint": "10.0.1",
     "eslint": "4.19.1",

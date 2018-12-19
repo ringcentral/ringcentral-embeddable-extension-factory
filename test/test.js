@@ -5,13 +5,14 @@ const {rm} = require('shelljs')
 const {resolve} = require('path')
 const prompts = require('prompts')
 const pkg = require('../package.json')
-const testConfig = {
+
+const testConfig0 = {
   name: 'my app',
   npmName: 'my-app',
   description: 'ma-app',
   version: '0.0.1',
   siteMatch: 'https://*.insightly.com/*',
-  spa: true,
+  template: 0,
   confirm: true
 }
 
@@ -21,7 +22,27 @@ const testConfig1 = {
   description: 'ma-app1',
   version: '0.0.1',
   siteMatch: 'https://*.redtailtechnology.com/*',
-  spa: false,
+  template: 1,
+  confirm: true
+}
+
+const testConfig2 = {
+  name: 'my app2',
+  npmName: 'my-app2',
+  description: 'ma-app2',
+  version: '0.0.1',
+  siteMatch: 'https://*.insightly.com/*',
+  template: 2,
+  confirm: true
+}
+
+const testConfig3 = {
+  name: 'my app3',
+  npmName: 'my-app3',
+  description: 'ma-app3',
+  version: '0.0.1',
+  siteMatch: 'https://*.redtailtechnology.com/*',
+  template: 3,
   confirm: true
 }
 
@@ -52,10 +73,38 @@ let tests = [
   }
 ]
 
+
+let tests1 = [
+  {
+    path: 'README.md',
+    strings: [
+      'name',
+      'description'
+    ]
+  },
+  {
+    path: 'src/manifest.json',
+    strings: [
+      'name',
+      'description',
+      'version',
+      'siteMatch'
+    ]
+  },
+  {
+    path: 'package.json',
+    strings: [
+      'npmName',
+      'description',
+      'version'
+    ]
+  }
+]
+
 describe(pkg.name, function() {
   this.timeout(100000)
-  it('spa', function(done) {
-    prompts.inject(testConfig)
+  it('spa1', function(done) {
+    prompts.inject(testConfig0)
     let p = resolve(__dirname, './my-app')
     reef({
       path: p,
@@ -69,7 +118,7 @@ describe(pkg.name, function() {
             p + '/' + path
           ).toString()
         for (let s of strings) {
-          let v = testConfig[s]
+          let v = testConfig0[s]
           assert(
             fileStr.includes(v),
             true
@@ -81,7 +130,7 @@ describe(pkg.name, function() {
     }, 3000)
   })
 
-  it('non spa', function(done) {
+  it('non spa1', function(done) {
     prompts.inject(testConfig1)
     let p = resolve(__dirname, './my-app1')
     reef({
@@ -97,6 +146,60 @@ describe(pkg.name, function() {
           ).toString()
         for (let s of strings) {
           let v = testConfig1[s]
+          assert(
+            fileStr.includes(v),
+            true
+          )
+        }
+      }
+      rm('-rf', p)
+      done()
+    }, 4000)
+  })
+
+  it('spa2', function(done) {
+    prompts.inject(testConfig2)
+    let p = resolve(__dirname, './my-app2')
+    reef({
+      path: p,
+      name: 'my-app2'
+    })
+    setTimeout(async function() {
+      for (let t of tests1) {
+        let {path, strings} = t
+        let fileStr = fs
+          .readFileSync(
+            p + '/' + path
+          ).toString()
+        for (let s of strings) {
+          let v = testConfig2[s]
+          assert(
+            fileStr.includes(v),
+            true
+          )
+        }
+      }
+      rm('-rf', p)
+      done()
+    }, 4000)
+  })
+
+  it('no spa2', function(done) {
+    prompts.inject(testConfig3)
+    let p = resolve(__dirname, './my-app3')
+    reef({
+      path: p,
+      name: 'my-app3'
+    })
+    setTimeout(async function() {
+      for (let t of tests1) {
+        let {path, strings} = t
+        let fileStr = fs
+          .readFileSync(
+            p + '/' + path
+          ).toString()
+        for (let s of strings) {
+          let v = testConfig3[s]
           assert(
             fileStr.includes(v),
             true

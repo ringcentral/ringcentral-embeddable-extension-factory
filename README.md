@@ -1,6 +1,6 @@
 # ringcentral-embeddable-extension-factory
 
-[![Build Status](https://travis-ci.org/zxdong262/ringcentral-embeddable-extension-factory.svg?branch=release)](https://travis-ci.org/zxdong262/ringcentral-embeddable-extension-factory)
+[![Build Status](https://travis-ci.org/ringcentral/ringcentral-embeddable-extension-factory.svg?branch=release)](https://travis-ci.org/ringcentral/ringcentral-embeddable-extension-factory)
 
 ![cli](screenshots/bb.jpg)
 
