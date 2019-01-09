@@ -31,10 +31,11 @@ Visit our [detailed tutorial](https://ringcentral-tutorials.github.io/build-chro
 
 ## Realworld examples
 
-- [pipedrive-embeddable-ringcentral-phone-spa](https://github.com/zxdong262/pipedrive-embeddable-ringcentral-phone-spa)
-- [hubspot-embeddable-ringcentral-phone (spa)](https://github.com/zxdong262/hubspot-embeddable-ringcentral-phone)
-- [insightly-embeddable-ringcentral-phone (spa)](https://github.com/zxdong262/insightly-embeddable-ringcentral-phone)
-- [redtail-embeddable-ringcentral-phone (non spa)](https://github.com/zxdong262/redtail-embeddable-ringcentral-phone)
+- [pipedrive-embeddable-ringcentral-phone-nospa](https://github.com/ringcentral/pipedrive-embeddable-ringcentral-phone-nospa)
+- [pipedrive-embeddable-ringcentral-phone-spa](https://github.com/ringcentral/pipedrive-embeddable-ringcentral-phone-spa)
+- [hubspot-embeddable-ringcentral-phone (spa)](https://github.com/ringcentral/hubspot-embeddable-ringcentral-phone)
+- [insightly-embeddable-ringcentral-phone (spa)](https://github.com/ringcentral/insightly-embeddable-ringcentral-phone)
+- [redtail-embeddable-ringcentral-phone (non spa)](https://github.com/ringcentral/redtail-embeddable-ringcentral-phone)
 
 ## License
 
