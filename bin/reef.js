@@ -6,7 +6,7 @@ const program = require('commander')
 
 program
   .version(require('../package.json').version)
-  .description('Cli tool to create a RingCentral Embeddable Voice chrome extension for CRM site')
+  .description('Cli tool to create a RingCentral Embeddable chrome extension for CRM site')
   .usage('[appName]')
   .parse(process.argv)
 
