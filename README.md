@@ -4,7 +4,7 @@
 
 ![cli](screenshots/bb.jpg)
 
-Cli tool to create a [RingCentral Embeddable](https://github.com/ringcentral/ringcentral-embeddable) chrome/firefox extension for CRM sites.
+Cli tool to create a [RingCentral Embeddable](https://github.com/ringcentral/ringcentral-embeddable) Chrome/Firefox extension for CRM sites.
 
 ![cli](screenshots/cli.png)
 
