@@ -31,6 +31,7 @@ const testConfig2 = {
   npmName: 'my-app2',
   description: 'ma-app2',
   version: '0.0.1',
+  browser: 'chrome',
   siteMatch: 'https://*.insightly.com/*',
   template: 0,
   confirm: true
@@ -41,6 +42,7 @@ const testConfig3 = {
   npmName: 'my-app3',
   description: 'ma-app3',
   version: '0.0.1',
+  browser: 'chrome',
   siteMatch: 'https://*.redtailtechnology.com/*',
   template: 1,
   confirm: true
