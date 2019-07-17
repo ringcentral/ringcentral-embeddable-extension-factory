@@ -27,7 +27,7 @@ Visit our [detailed tutorial](https://ringcentral-tutorials.github.io/build-chro
 
 ## Video
 
-[https://youtu.be/2njQSk8x2K4](https://youtu.be/2njQSk8x2K4)
+[https://youtu.be/okwzLs4T5zc](https://youtu.be/okwzLs4T5zc)
 
 ## Realworld examples
 
