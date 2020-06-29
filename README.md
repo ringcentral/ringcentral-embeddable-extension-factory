@@ -11,7 +11,7 @@ Cli tool to create a [RingCentral Embeddable](https://github.com/ringcentral/rin
 ## Quick start
 
 ```bash
-# make sure you have npm@5.2+ installed
+# make sure you have npm@5.2+ installed, and Linux and mac OS only
 npx ringcentral-embeddable-extension-factory my-app
 # or install it first
 # npm i -g ringcentral-embeddable-extension-factory && reef my-app
